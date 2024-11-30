@@ -1,20 +1,20 @@
 class Bping < Formula
-  desc "The bping application"
-  homepage "https://github.com/BitpingApp/bping"
-  version "2.0.4"
+  desc "A command line utility to ping a website from anywhere in the world!"
+  homepage "https://bitping.com"
+  version "2.0.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/BitpingApp/bping/releases/download/2.0.4/bping-aarch64-apple-darwin.tar.xz"
-      sha256 "c11f9bdc8d2e2e8f4ceaddac0f9a1079e37bb4c9015dbbd2338ad513c6debd61"
+      url "https://github.com/BitpingApp/bping/releases/download/2.0.5/bping-aarch64-apple-darwin.tar.xz"
+      sha256 "a58862eb5157f307ee83519520427245de49c38ba02e961b021ae44c111109a4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BitpingApp/bping/releases/download/2.0.4/bping-x86_64-apple-darwin.tar.xz"
-      sha256 "0ee7397c563e52b4876854310b0ce0535b9eeab9bfc188f73bb6bd09dd16d046"
+      url "https://github.com/BitpingApp/bping/releases/download/2.0.5/bping-x86_64-apple-darwin.tar.xz"
+      sha256 "916963d6fc0c428b3061b70bf473d80209c834955c7c4d23fecc5cefeca0a7a2"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/BitpingApp/bping/releases/download/2.0.4/bping-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "0f7cbcefa531af95e0f2438565ca2eeba61ce7ae2fb3e50dd7bdba9566feae34"
+    url "https://github.com/BitpingApp/bping/releases/download/2.0.5/bping-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "f7ad962b8d50738a6fc63316f8ddfe54e0ed65c97787362fa371df8959dca6ff"
   end
 
   BINARY_ALIASES = {
