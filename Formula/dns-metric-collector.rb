@@ -1,24 +1,31 @@
 class DnsMetricCollector < Formula
   desc "A monitoring tool backed by Bitping's distributed network, exposed as a Prometheus metrics endpoint"
   homepage "https://bitping.com"
-  version "0.1.0"
+  version "1.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/0.1.0/dns-metric-collector-aarch64-apple-darwin.tar.xz"
-      sha256 "d22f7f908819c738c5b582c00041bfbee6491e5c25bcf9b14a460d093de281ae"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.0/dns-metric-collector-aarch64-apple-darwin.tar.xz"
+      sha256 "5d28110fc5a687a76fc62c15d7b52bf6b710e1f5598f7335d26996d2f87405e5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/0.1.0/dns-metric-collector-x86_64-apple-darwin.tar.xz"
-      sha256 "fada6c9cc18a1ea90a58869d944c43e00557df2e0bb12dc846fe36f7b672af37"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.0/dns-metric-collector-x86_64-apple-darwin.tar.xz"
+      sha256 "35b51cee31ea14e2d806053e9a997b37fdbdf08a1af06a49d4c068a35474a40d"
     end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/BitpingApp/distributed-metrics/releases/download/0.1.0/dns-metric-collector-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "42084ee83656c2edcbb35678232689322bee58d513a0ce17e376f31b9c43255c"
+  if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.0/dns-metric-collector-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "224bece9efdf7ac8ba75fed3a832d386aac9fbd0dbaf17a4f0fd84b3e78ce8dd"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.0/dns-metric-collector-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "84c728d129f78e79cfdb28f1e1c7911605c8e3cfbd32d5319d4cebfa364c2538"
+    end
   end
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":              {},
+    "aarch64-unknown-linux-gnu":         {},
     "x86_64-apple-darwin":               {},
     "x86_64-unknown-linux-gnu":          {},
     "x86_64-unknown-linux-musl-dynamic": {},
@@ -43,6 +50,7 @@ class DnsMetricCollector < Formula
   def install
     bin.install "dns-metric-collector" if OS.mac? && Hardware::CPU.arm?
     bin.install "dns-metric-collector" if OS.mac? && Hardware::CPU.intel?
+    bin.install "dns-metric-collector" if OS.linux? && Hardware::CPU.arm?
     bin.install "dns-metric-collector" if OS.linux? && Hardware::CPU.intel?
 
     install_binary_aliases!
