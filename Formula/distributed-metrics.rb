@@ -5,21 +5,21 @@ class DistributedMetrics < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.1/distributed-metrics-aarch64-apple-darwin.tar.xz"
-      sha256 "f909c04d937183e6a6631613c2345b64759fb9179c41f5b2f7273fbaa76e58d7"
+      sha256 "5d21871ef16a2a82e69bb1dc5ac920ce1db2603e9e72f5009c1a440500be1107"
     end
     if Hardware::CPU.intel?
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.1/distributed-metrics-x86_64-apple-darwin.tar.xz"
-      sha256 "a62f42454d5d49dc0ffd128a80bb6d42534d68621c2429045e501f2898e16630"
+      sha256 "1b52001ec46db797470ef5f7409d2327012d2b60a0a194610a7f50b7ef75757a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.1/distributed-metrics-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "24bf2b210f3f64ef45b00888e7b8570d0eb8ac991e97735f3103a99d295ff302"
+      sha256 "c791221b5474cade04af4a92251124fd7b6fa99dd6e53af4699977b99b4a51ab"
     end
     if Hardware::CPU.intel?
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.0.1/distributed-metrics-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4158bb90c515071547d999a658776d4f4951f6eb9debba3c7c8e982dd5114894"
+      sha256 "203cb0a220a987543968441550734ca540d77e182c21729c4ea7b13bba58ef99"
     end
   end
 
