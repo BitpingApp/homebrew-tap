@@ -1,25 +1,25 @@
 class DistributedMetrics < Formula
   desc "A monitoring tool backed by Bitping's distributed network, exposed as a Prometheus metrics endpoint"
   homepage "https://bitping.com"
-  version "1.2.0"
+  version "1.2.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.0/distributed-metrics-aarch64-apple-darwin.tar.xz"
-      sha256 "e433ab27568f86fb20c40afe92a22269f5e7d149d7823a69f75275417e5163c9"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.1/distributed-metrics-aarch64-apple-darwin.tar.xz"
+      sha256 "d5ea62e5061cc96ccabc5c43bc550292c40b9fe13e408efd67cc4b1491e179db"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.0/distributed-metrics-x86_64-apple-darwin.tar.xz"
-      sha256 "4c15eac3bfc714ae9182fdcf4c6e8464273e26dc79ed2a1233eda022ee3326c3"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.1/distributed-metrics-x86_64-apple-darwin.tar.xz"
+      sha256 "d67e171c9c01408a5d90d7e0d767af040e71491d06c0ffc0f3204a6de21f53b1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.0/distributed-metrics-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6f05928320956eb4bbdbf5318618c266f7a41d7adc58b764c75041f0ef7cf433"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.1/distributed-metrics-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cd1cdead59234df40b81d01818a3156750c01539a4a7903ea479d4bcc086b16d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.0/distributed-metrics-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d778b55d619e8cc12c35b1a61481ff865592ba611cf12cf55289c7c40354ebb5"
+      url "https://github.com/BitpingApp/distributed-metrics/releases/download/1.2.1/distributed-metrics-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "75ef1081cb55ab9ac6f6c1ff59ce28fce6182d8702d7e3eb47ad34a08245333e"
     end
   end
 
