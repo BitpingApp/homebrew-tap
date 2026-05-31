@@ -4,12 +4,12 @@ cask "distributed-metrics" do
 
   on_macos do
     on_intel do
-      sha256 "193dd1c3d92c6f27073a59d5b92cac7a659d53775b62c11832e6c1fd4b55c985"
+      sha256 "4f9680b51a75c06f8857f82cd8967e2247b6241afa1c441179cbe3dd042f99e4"
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/v#{version}/distributed-metrics-#{version}-darwin-amd64.tar.xz",
         verified: "github.com/BitpingApp/distributed-metrics"
     end
     on_arm do
-      sha256 "79342e9f9fbfe14c300b5b862ac44b14bd700552d806cc6887a685fdc93b43f0"
+      sha256 "29bf3b09851ae21d749921bd89d20b92ec289f1174df727eef0681773098004b"
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/v#{version}/distributed-metrics-#{version}-darwin-arm64.tar.xz",
         verified: "github.com/BitpingApp/distributed-metrics"
     end
@@ -17,12 +17,12 @@ cask "distributed-metrics" do
 
   on_linux do
     on_intel do
-      sha256 "633f738302fc76f0891cb918afdccd48da664c495f19eb25a5d42013034e0361"
+      sha256 "c77d0e19a3a4c7e88532f081ddcb9911d88d3a0a0e2ba1d3805eb938530f8b85"
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/v#{version}/distributed-metrics-#{version}-linux-amd64.tar.xz",
         verified: "github.com/BitpingApp/distributed-metrics"
     end
     on_arm do
-      sha256 "dd68678de7e49dcc1a128b4b5a2d5bc72e2c7be53200f5caa6ea92a8f333760e"
+      sha256 "54ff238119812bf6f54ee40aa7f291b64db056b5b419da6a589d129f487325e6"
       url "https://github.com/BitpingApp/distributed-metrics/releases/download/v#{version}/distributed-metrics-#{version}-linux-arm64.tar.xz",
         verified: "github.com/BitpingApp/distributed-metrics"
     end
