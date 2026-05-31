@@ -4,12 +4,12 @@ cask "p2proxy" do
 
   on_macos do
     on_intel do
-      sha256 "9218560eaf6134c7e80e9b3578f97e8f289751ac5a1e4a6ecd64d9ac6244ab0c"
+      sha256 "9c95a61dabe1759f45e61a8446d5bcf319c24dd4210ee03ea341235ec9b8acc5"
       url "https://github.com/BitpingApp/p2proxy/releases/download/v#{version}/p2proxy-#{version}-darwin-amd64.tar.xz",
         verified: "github.com/BitpingApp/p2proxy"
     end
     on_arm do
-      sha256 "e8280186a4b792f5442f261e617e841012259ca60dc58f66981fc665f45476dc"
+      sha256 "0744b3dcff6c32de3603758a18e44a2a6668be40fe52354505f49b1640402e16"
       url "https://github.com/BitpingApp/p2proxy/releases/download/v#{version}/p2proxy-#{version}-darwin-arm64.tar.xz",
         verified: "github.com/BitpingApp/p2proxy"
     end
@@ -17,12 +17,12 @@ cask "p2proxy" do
 
   on_linux do
     on_intel do
-      sha256 "394601dd698cde98132119a8d2c5c867e5f2dd9258f84f74f981143b1482d6dc"
+      sha256 "0c40f5a102ffb4c55e178bd614550e2648a2cd54b6bcad6812864621a9aa3c03"
       url "https://github.com/BitpingApp/p2proxy/releases/download/v#{version}/p2proxy-#{version}-linux-amd64.tar.xz",
         verified: "github.com/BitpingApp/p2proxy"
     end
     on_arm do
-      sha256 "b4cdac840c19355768b8aea63f2b40aad3238f928315ca7c6fe7de2ab49f9e6f"
+      sha256 "a9b486b1e19c772389b61f1a60cbdacca465f69e165a7474fc944f364962ea70"
       url "https://github.com/BitpingApp/p2proxy/releases/download/v#{version}/p2proxy-#{version}-linux-arm64.tar.xz",
         verified: "github.com/BitpingApp/p2proxy"
     end
